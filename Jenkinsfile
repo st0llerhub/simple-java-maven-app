@@ -1,18 +1,31 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3-alpine'
-            args '-v /root/.m2:/root/.m2'
-        }
-    }
+    agent { label 'master' }
     stages {
-        stage('Build') {
+        stage('build') {
             steps {
-                echo "Hello World"
+                echo "Hello World!"
+                sh "echo Hello from the shell"
                 sh "hostname"
                 sh "uptime"
-                sh 'mvn -B -DskipTests clean package'
             }
         }
     }
 }
+// pipeline {
+//     agent {
+//         docker {
+//             image 'maven:3-alpine'
+//             args '-v /root/.m2:/root/.m2'
+//         }
+//     }
+//     stages {
+//         stage('Build') {
+//             steps {
+//                 echo "Hello World"
+//                 sh "hostname"
+//                 sh "uptime"
+//                 sh 'mvn -B -DskipTests clean package'
+//             }
+//         }
+//     }
+// }
