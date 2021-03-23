@@ -17,9 +17,9 @@ public class App
         System.out.println("Coffee: "+coffeeA.getType() + " - Price: " +coffeeA.getPrice());
 
         // Calculate coffeeB price and print it:
-//        CoffeeWithTaste coffeeB = new CoffeeWithTaste("milk");
-//        coffeeB.calculateCoffeePrice(coffeeB);
-//        System.out.println("Coffee: "+coffeeB.getType() + " - Price: " +coffeeB.getPrice());
+        CoffeeWithTaste coffeeB = new CoffeeWithTaste("milk");
+        coffeeB.calculateCoffeePrice(coffeeB);
+        System.out.println("Coffee: "+coffeeB.getType() + " - Price: " +coffeeB.getPrice());
 //
 //        // Test exception:
 //        CoffeeWithTaste coffeeC = new CoffeeWithTaste("blue");
