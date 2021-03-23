@@ -4,11 +4,14 @@ pipeline {
             image 'maven:3-alpine'
             args '-v /root/.m2:/root/.m2' 
         }
+        environment {
+            NEW_VERSION = '1.7'
+        }
     }
     stages {
         stage('Build') {
             steps {
-                echo 'Building...'
+                echo "Building...${NEW_VERSION}"
                 sh 'mvn -B -DskipTests clean package'
             }
         }
