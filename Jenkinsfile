@@ -2,11 +2,13 @@ pipeline {
     agent {
         docker {
             image 'maven:3-alpine'
-            args '-v /root/.m2:/root/.m2' 
+            args '-v /root/.m2:/root/.m2'
+
+            environment {
+                        NEW_VERSION = '1.7'
+            }
         }
-        environment {
-            NEW_VERSION = '1.7'
-        }
+
     }
     stages {
         stage('Build') {
