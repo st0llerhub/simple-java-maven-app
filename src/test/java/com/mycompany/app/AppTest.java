@@ -25,8 +25,7 @@ public class AppTest
     public void testAppMain() throws Exception {
         App.main(null);
         try {
-
-            assertEquals("Coffee: dark - Price: 1.2" + "Coffee: milk - Price: 1.9" + System.getProperty("line.separator"), outContent.toString());
+            assertEquals("Coffee: dark - Price: 1.2" + System.getProperty("line.separator"), outContent.toString());
         } catch (AssertionError e) {
             fail("\"message\" is not \"Coffee: dark - Price: 1.2\"");
         }
