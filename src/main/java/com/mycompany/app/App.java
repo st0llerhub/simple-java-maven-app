@@ -9,6 +9,8 @@ public class App
 
     private final String message = "Hello World!";
 
+    private final String ABC = "Hallo Welt!";
+
     public App() {}
 
     public static void main(String[] args) {
